@@ -374,8 +374,12 @@
     background: var(--white); border: 1px solid var(--border);
     border-radius: 10px; overflow: hidden; position: sticky; top: 84px;
   }
+  .profile-card-photo-wrap {
+    width: 100%; aspect-ratio: 3/4; position: relative; overflow: hidden; display: block;
+  }
   .profile-card-img {
-    width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; display: block;
+    width: 100%; height: 100%; object-fit: cover; object-position: top center;
+    display: block; position: absolute; top: 0; left: 0;
   }
   .profile-card-body { padding: 1.5rem; }
   .profile-card-name {
@@ -667,12 +671,14 @@
     <h2 class="section-title">A closer look at <em>who I am</em></h2>
     <div class="profile-inner" style="margin-top:3.5rem;">
       <div class="profile-card">
-        <img
-          class="profile-card-img"
-          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop&crop=top"
-          alt="Sofia Reyes"
-          loading="lazy"
-        />
+        <div class="profile-card-photo-wrap">
+          <img
+            class="profile-card-img"
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop&crop=top"
+            alt="Sofia Reyes"
+            loading="lazy"
+          />
+        </div>
         <div class="profile-card-body">
           <div class="profile-card-name">Sofia Reyes</div>
           <div class="profile-card-title">Virtual Assistant</div>
